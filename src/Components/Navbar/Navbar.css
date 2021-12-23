@@ -1,0 +1,21 @@
+.Navbar {
+  background-color: #e6af2e;
+  display: flex;
+  justify-content: space-between;
+}
+.left-side {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.Link {
+  color: #ececec;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.Link:hover {
+  color: #282f44;
+}
