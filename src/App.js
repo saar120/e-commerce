@@ -8,21 +8,35 @@ import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
 import Homepage from "./Pages/HomePage/Homepage";
 
 export default class App extends Component {
+  state = { cartItems: [] };
+
+  addToCartHandler = (item) => {
+    const newCartItems = [...this.state.cartItems, item];
+    this.setState({ cartItems: newCartItems });
+  };
+
+  payNowHandler = () => {
+    this.setState({ cartItems: [] });
+  };
   render() {
     return (
       <Router>
-        <Navbar />
+        <Navbar count={this.state.cartItems.length} />
         <Switch>
           <Route path="/" exact>
             <Homepage />
           </Route>
           <Route path="/checkout" exact>
-            <CheckoutPage />
+            <CheckoutPage cartItems={this.state.cartItems} payNowHandler={this.payNowHandler} />
           </Route>
           <Route path="/categories" exact>
             <Categories />
           </Route>
-          <Route path="/categories/:category" exact component={Category} />
+          <Route
+            path="/categories/:category"
+            exact
+            render={(props) => <Category {...props} addToCartHandler={this.addToCartHandler} />}
+          />
         </Switch>
       </Router>
     );

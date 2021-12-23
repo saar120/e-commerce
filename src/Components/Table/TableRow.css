@@ -1,0 +1,11 @@
+.item {
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  height: 4rem;
+  width: clamp(10rem, 95%, 60rem);
+  border-radius: 5px;
+  background-color: #e6af2e;
+}

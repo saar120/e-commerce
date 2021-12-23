@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "../Item/Item.css";
 export default class Item extends Component {
+  addToCartHandler = (item) => {
+    this.props.addToCartHandler(item);
+  };
+
   render() {
     const { item } = this.props;
     return (
@@ -10,7 +14,7 @@ export default class Item extends Component {
           <div className="title">{item.title}</div>
           <div className="price">Price: {item.price}$</div>
         </div>
-        <button>Add To Cart</button>
+        <button onClick={() => this.addToCartHandler(item)}>Add To Cart</button>
       </div>
     );
   }

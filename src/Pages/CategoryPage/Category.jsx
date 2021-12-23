@@ -13,17 +13,22 @@ export default class Category extends Component {
     this.setState({ items });
   };
 
+  addToCartHandler = (item) => {
+    this.props.addToCartHandler(item);
+  };
+
   renderItems = () => {
     return this.state.items.length === 0 ? (
       <div>Loading</div>
     ) : (
       this.state.items.map((item) => {
-        return <Item key={item.id} item={item} />;
+        return <Item key={item.id} item={item} addToCartHandler={this.addToCartHandler} />;
       })
     );
   };
 
   componentDidMount = () => {
+    console.log("didMount");
     this.setCategoryItems();
   };
 

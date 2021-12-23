@@ -10,6 +10,7 @@
 }
 
 .Link {
+  position: relative;
   color: #ececec;
   text-decoration: none;
   padding: 10px;
@@ -18,4 +19,12 @@
 
 .Link:hover {
   color: #282f44;
+}
+
+span {
+  position: absolute;
+  top: 12px;
+  left: 23px;
+  color: #282f44;
+  font-size: 1.2rem;
 }

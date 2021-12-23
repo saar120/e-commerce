@@ -16,7 +16,9 @@ export default class Navbar extends Component {
           </Link>
         </div>
         <Link to="/checkout" className="Link">
-          <i className="fas fa-shopping-cart fa-2x"></i>
+          <i className="fas fa-shopping-cart fa-2x">
+            <span>{this.props.count}</span>
+          </i>
         </Link>
       </div>
     );
