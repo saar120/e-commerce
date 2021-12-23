@@ -1,0 +1,11 @@
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+h2 {
+  text-align: center;
+  color: #ececec;
+}

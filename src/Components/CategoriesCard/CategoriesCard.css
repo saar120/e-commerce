@@ -1,0 +1,20 @@
+.category {
+  text-align: center;
+  color: #ececec;
+  text-decoration: none;
+  padding: 10px;
+  border: #ececec 3px solid;
+  border-radius: 20px;
+  min-width: 10rem;
+  margin: 0 10px;
+}
+
+.category:hover {
+  background-color: #ececec;
+  color: #000;
+}
+
+.categoriesCard {
+  display: flex;
+  justify-content: center;
+}

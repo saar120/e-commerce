@@ -22,9 +22,7 @@ export default class App extends Component {
           <Route path="/categories" exact>
             <Categories />
           </Route>
-          <Route path="/categories/:category" exact>
-            <Category />
-          </Route>
+          <Route path="/categories/:category" exact component={Category} />
         </Switch>
       </Router>
     );
